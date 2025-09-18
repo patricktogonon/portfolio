@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mona Sans", sans-serif;
+}
+
+/* Day mode */
+body {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: black;
+  color: #ffffff;
+}
+
+/* ALL BOX CONTAINER HOVER */
+
+.hover-box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.hover-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Optional: slight lift effect */
+}
+
+.profile-container {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center; /* Vertically align image and text */
+  gap: 20px; /* Space between image and text */
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.profile-container .image {
+  /* border: 1px solid red; */
+  width: 150px;
+  height: 150px; /* Maintain aspect ratio */
+  object-fit: cover; /* or 'contain' if you don't want cropping */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.profile-info {
+  flex: 1; /* Take up remaining space */
+}
+.soc-link {
+  display: flex;
+  gap: 10px;
+}
+.spacer {
+  flex-grow: 1;
+}
+.soc-link button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: grey;
+  cursor: pointer;
+}
+
+/* ABOUT  */
+.about-container {
+  display: flex;
+  align-items: stretch; /* ⬅️ This ensures both columns match height */
+  gap: 20px;
+  padding: 20px;
+  height: auto; /* Let content define height */
+  /* border: 1px solid red; */
+  max-width: 800px;
+  margin: auto;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-info {
+  flex: 1; /* Both containers take equal width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.about-info p {
+  font-size: 13px;
+}
+
+.techstack-info {
+  flex: 1; /* Both containers take equal width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.techstack-info p {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px 20px;
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+/* FOR EXPERIENCE */
+
+.experience-info {
+  width: 250px; /* Fixed width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  /* Stretch to match left column's height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* optional */
+  border-radius: 8px;
+}
+
+.experience-outer {
+  display: block;
+  justify-content: center; /* Center box horizontally */
+  align-items: center; /* Center box vertically */
+  height: auto; /* Full viewport height */
+}
+
+.experience-text {
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: block;
+  font-size: 10px;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  margin: 10px;
+  padding: 10px;
+}
+
+.experience-text .ppp {
+  font-style: italic;
+}
+
+/* FOR CERTIFICATES */
+
+.certificate-container {
+  display: flex;
+  align-items: stretch; /* ⬅️ This ensures both columns match height */
+  gap: 20px;
+  padding: 20px;
+  height: auto; /* Let content define height */
+  /* border: 1px solid red; */
+  max-width: 800px;
+  margin: auto;
+}
+
+.certificate-info {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.certificates-outer {
+  display: block;
+  justify-content: center; /* Center box horizontally */
+  align-items: center; /* Center box vertically */
+  height: auto; /* Full viewport height */
+}
+
+.certificate-text {
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 10px;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  margin: 10px;
+  padding: 10px;
+}
+
+/* FOR PROJECTS */
+
+.project-info {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.project-outer {
+  height: auto; /* Full viewport height */
+  display: block;
+}
+
+.project-text {
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.project-text p {
+  font-size: 10px;
+}
+
+.button-project {
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+}
+
+.social-container {
+  display: flex;
+  align-items: stretch; /* ⬅️ This ensures both columns match height */
+  gap: 20px;
+  padding: 20px;
+  height: auto; /* Let content define height */
+  /* border: 1px solid red; */
+  max-width: 800px;
+  margin: auto;
+}
+
+.social-info {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.social-info .soc-link2 {
+  display: inline-block;
+}
+
+.soc-link2 {
+  display: flex;
+  gap: 10px;
+}
+
+.soc-link2 button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: grey;
+  cursor: pointer;
+}
+
+.soc-link2 a {
+  text-decoration: none;
+}
+
+.reference-info {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.reference-info {
+  flex: 1; /* Both containers take equal width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.reference-info p {
+  font-size: 13px;
+}
+
+/* FOR SLIDER SIDE */
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* FOOTER SIDE */
+
+.all-rights {
+  height: auto;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+
+.all-rights p {
+  text-align: center;
+  padding: 30px;
+  font-weight: 400;
+}
+
+/* FOR SWITCH */
+:root {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 1.5em;
+  /* size of the icon : sun & moon */
+  --size-of-icon: 1em;
+  /* inline padding for the switch */
+  --slider-offset: 0.3em;
+}
+.switch input {
+  /* hide the input */
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switch {
+  display: block;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(163, 163, 163);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: #303136;
+}
+
+input:checked + .slider::before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+
+  /* chnage the value of the second inset in boxshadow to change the angle and direction of the moon */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+.mySlides h6 {
+  font-style: italic;
+}
